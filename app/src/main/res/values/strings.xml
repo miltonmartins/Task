@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Task</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="sign_up">Sign up</string>
+    <string name="password">Password</string>
+
+    <string name="error_addTask">Unable to add task</string>
+    <string name="done">Done</string>
+    <string name="to_do">To Do</string>
+    <string name="description">Description</string>
+    <string name="select_date">Select date</string>
+    <string name="save_task">Save Task</string>
+    <string name="task_removed">Task removed</string>
+    <string name="task_added">Task was added</string>
+    <string name="remove_task">Remove Task</string>
+    <string name="ask_remove">Do you want to remove the task?</string>
+    <string name="cancel">Cancel</string>
+    <string name="remove">Remove</string>
+    <string name="task">Task</string>
+</resources>
