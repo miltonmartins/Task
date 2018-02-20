@@ -5,6 +5,7 @@ import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.ImageView
+import android.widget.RelativeLayout
 import android.widget.TextView
 import com.developer.milton.task.R
 import com.developer.milton.task.entities.OnTaskListFragmentInteractionListener
@@ -16,6 +17,7 @@ class TaskViewHolder(itemView: View, val mContext: Context, val mListener: OnTas
     private val mTextPriority: TextView = itemView.findViewById(R.id.textPriority)
     private val mImageTask: ImageView = itemView.findViewById(R.id.imageTask)
     private val mTextDate: TextView = itemView.findViewById(R.id.textDueDate)
+    private val mRelativeTask: RelativeLayout = itemView.findViewById(R.id.relativeTask)
 
     fun bindData(task: TaskEntity) {
         mTextDescription.text = task.description
@@ -23,13 +25,13 @@ class TaskViewHolder(itemView: View, val mContext: Context, val mListener: OnTas
         mTextDate.text = task.dueDate
 
         if (task.status.equals("true"))
-            mImageTask.setImageResource(R.drawable.ic_done)
+            mImageTask.setImageResource(R.drawable.ic_check_circle)
 
-        mTextDescription.setOnClickListener({
+        mRelativeTask.setOnClickListener({
             mListener.onListClick(task.id)
         })
 
-        mTextDescription.setOnLongClickListener({
+        mRelativeTask.setOnLongClickListener({
             showConfirmationDialog(task.id)
             true
         })

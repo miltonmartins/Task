@@ -16,11 +16,12 @@ class DataBaseHelper {
 
         dataTaskRef
                 .add(task)
-                .addOnSuccessListener { documentReference -> Log.d(TAG, "DocumentSnapshot written with ID: " + documentReference.id) }
+                .addOnSuccessListener { documentReference -> updateTask(task, documentReference.id)  }
                 .addOnFailureListener { e -> Log.w(TAG, "Error adding document", e) }
     }
 
     fun updateTask(mTaskEntity: TaskEntity, taskId: String) {
+        mTaskEntity.id = taskId
         dataTaskRef
                 .document(taskId)
                 .set(mTaskEntity)
